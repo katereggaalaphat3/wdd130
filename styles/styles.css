@@ -12,6 +12,13 @@ header {
   text-align: center;
 }
 
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #333;
+  padding: 10px 0;
+}
+
 nav a {
   color: #fff;
   text-decoration: none;
@@ -19,7 +26,7 @@ nav a {
 }
 
 main {
-  width: 70%;
+  max-width: 70%;
   margin: 20px auto;
   padding: 10px;
 }
@@ -36,6 +43,13 @@ aside {
 aside img {
   width: 200px;
   height: auto;
+}
+
+h1 {
+  font-size: 2em;
+  text-align: center;
+  margin: 20px 0;
+  color: #333;
 }
 
 p {
@@ -55,5 +69,3 @@ main img {
   width: 150px;
   height: auto;
 }
-
-  
