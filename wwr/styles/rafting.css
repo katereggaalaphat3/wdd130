@@ -117,13 +117,26 @@ section h2 {
 
 /* Footer */
 footer {
-    padding: 1rem;
+    padding: 1rem 2rem; /* Added padding for spacing */
     background-color: var(--primary-color);
     color: white;
-    text-align: center;
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Spread content: text left, icons right */
+    align-items: center; /* Center items vertically */
+}
+
+footer p {
+    margin: 0; /* Ensure no extra margin for paragraph */
+    flex-grow: 1; /* Allow paragraph to take up remaining space and center it */
+    text-align: center; /* Center the text */
+}
+
+footer .social-links {
+    display: flex;
+    gap: 0.5rem; /* Space between icons */
 }
 
 footer .social-links img {
     height: 30px;
-    margin: 0 0.5rem;
+    margin: 0;
 }
