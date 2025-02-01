@@ -108,7 +108,9 @@
 
   section h2 {
     margin-bottom: 1rem;
-}
+    font-size: 3rem;
+    text-align: center;
+}    
 
 /* History Section */
 .history-content {
