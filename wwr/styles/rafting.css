@@ -6,113 +6,140 @@
     --accent2-color: #505033;
     --text-color: #333333;
     --background-color: #F5F5F5;
-}
-
-/* General Reset */
-* {
+  }
+  
+  /* General Reset */
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-/* Body Styling */
-body {
+  }
+  
+  /* Body Styling */
+  body {
     font-family: 'Roboto', sans-serif;
     color: var(--text-color);
     background-color: var(--background-color);
     line-height: 1.6;
-}
-
-/* Header */
-header {
-    display: flex;
-    justify-content: space-between;
+  }
+  
+  /* Header */
+  header {
+    display: grid;
+    grid-template-columns: auto 1fr;
     align-items: center;
     padding: 1rem 2rem;
     background-color: var(--primary-color);
     color: white;
-}
-
-header .logo {
-    height: 50px;
-}
-
-header nav ul {
+  }
+  
+  header .logo {
+    height: 100px;
+  }
+  
+  header nav {
+    text-align: right; /* Align the navigation to the right */
+  }
+  
+  header nav ul {
     list-style: none;
     display: flex;
     gap: 1rem;
-}
-
-header nav a {
+    justify-content: flex-end; /* Align the navigation to the right */
+  }
+  
+  header nav a {
     text-decoration: none;
     color: white;
     font-weight: bold;
-}
-
-/* Hero Section */
-.hero {
+  }
+  
+  /* Hero Section */
+  .hero {
     position: relative;
     text-align: center;
     background-color: var(--accent1-color);
     padding: 2rem 0;
-}
-
-.hero-img {
+  }
+  
+  .hero-img {
     width: 100%;
     height: auto;
-}
-
-.hero h1 {
+  }
+  
+  .hero h1 {
     position: absolute;
-    top: 20%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 3rem;
+    font-size: 4rem;
     color: white;
     font-family: 'Oswald', sans-serif;
-}
-
-.hero article {
+  }
+  
+  .hero article {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgba(255, 255, 255, 0.9);
     padding: 1.5rem;
-    border-radius: 8px;
+    border-radius: 25px;
     text-align: left;
-    max-width: 600px;
-}
-
-.hero .article-img {
+    max-width: 900px;
+  }
+  
+  .hero .article-img {
     float: right;
     margin-left: 1rem;
-    width: 150px;
+    width: 300px;
+    Height: 250px;
     border-radius: 8px;
-}
-
-/* Sections */
-section {
+  }
+  
+  /* Sections */
+  section {
     padding: 2rem;
     text-align: center;
     margin-top: 1rem;
     background-color: var(--secondary-color);
     border-radius: 8px;
-}
+  }
 
-section h2 {
+  section h2 {
     margin-bottom: 1rem;
 }
 
+/* History Section */
+.history-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 0.5rem;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.history-img {
+    width: 300px;
+    Height: 250px;
+    border-radius: 8px;
+}
+
+/* Adventure Section */
 .gallery {
     display: flex;
     justify-content: center;
     gap: 1rem;
 }
 
+.gallery figure {
+    text-align: center;
+}
+
 .gallery img {
-    width: 150px;
-    border-radius: 8px;
+    width: 250px;
+    border-radius: 16px;
 }
 
 /* Footer */
@@ -133,7 +160,7 @@ footer p {
 
 footer .social-links {
     display: flex;
-    gap: 0.5rem; /* Space between icons */
+    gap: 1rem; /* Space between icons */
 }
 
 footer .social-links img {
