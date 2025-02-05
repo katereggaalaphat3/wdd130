@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - White Water Rafting</title>
+    <meta name="description" content="Get in touch with White Water Rafting. Contact us for inquiries, reservations, and more information about our exciting rafting adventures.">
+    <link rel="stylesheet" href="styles/rafting.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <img src="images/logo.png" alt="White Water Rafting Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="trips.html">Trips</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Section -->
+    <main>
+        <section>
+            <h2>Contact Information</h2>
+            <p>Address: 123 River Road, Adventure Town, AT 12345</p>
+            <p>Phone: (555) 555-5555</p>
+            <p>Email: contact@whitewaterrafting.com</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.6878482373354!2d-122.41941548468177!3d37.77492927975871!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064f6e3ab1d%3A0x7423e4723bbf0320!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2s!4v1616255880786!5m2!1sen!2s" width="300" height="225";" allowfullscreen="" loading="lazy"></iframe>
+        </section>
+
+        <section>
+            <h2>Our Team</h2>
+            <div class="employee-profiles">
+                <figure>
+                    <img src="images/employee1.jpg" alt="Employee 1">
+                    <figcaption>James kirkpatrick - Lead Guide</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/employee2.jpg" alt="Employee 2">
+                    <figcaption>Jacee shykirk - Safety Officer</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/employee3.jpg" alt="Employee 3">
+                    <figcaption>Mike Johnson - Adventure Coordinator</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section>
+            <h2>Contact Us</h2>
+            <form action="submit_form.php" method="POST">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+                <label for="purpose">Purpose of Message:</label><br>
+                <input type="radio" id="general" name="purpose" value="General Inquiry" required>
+                <label for="general" class="radio-label">General Inquiry</label><br>
+                <input type="radio" id="reservation" name="purpose" value="Reservation Question" required>
+                <label for="reservation" class="radio-label">Reservation Question</label><br>
+                <input type="radio" id="website" name="purpose" value="Website Suggestion" required>
+                <label for="website" class="radio-label">Website Suggestion</label><br>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea><br>
+                <input type="checkbox" id="subscribe" name="subscribe">
+                <label for="subscribe">Please subscribe me to the monthly newsletter</label><br>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 White Water Rafting. All Rights Reserved. Alaphat Mob Kateregga <a href="https://app.moqups.com/CGrWyiHpUfcIyFaE6ssf72TaNLnJnNIV/view/page/ad64222d5" class="wireframe-link">Contact Us Wireframe</a></p>
+        <div class="social-links">
+            <a href="#"><img src="images/facebook-icon.png" alt="Facebook"></a>
+            <a href="#"><img src="images/x-icon.png" alt="X"></a>
+            <a href="#"><img src="images/instagram-icon.png" alt="Instagram"></a>
+        </div>
+    </footer>
+</body>
+</html>
