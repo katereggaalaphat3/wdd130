@@ -202,11 +202,11 @@ input[type="radio"] {
 input[type="text"],
 input[type="email"],
 textarea {
-  width: 75%;
-  padding: 0.3rem;
+  width: 50%;
+  padding: 0.2rem;
   border: 1px solid var(--accent2-color);
   border-radius: 4px;
-  font-size: 1.2rem; /* Increase font size */
+  font-size: 0.8rem; /* Increase font size */
 }
 
 button[type="submit"] {
