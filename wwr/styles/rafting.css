@@ -208,7 +208,11 @@ textarea {
   border-radius: 4px;
   font-size: 0.8rem; /* Increase font size */
 }
-
+label[for="message"] {
+  display: inline-block;
+  vertical-align: top; 
+  margin-top: 5px;
+}
 button[type="submit"] {
   background-color: var(--primary-color);
   color: white;
