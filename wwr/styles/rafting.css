@@ -104,11 +104,11 @@ header nav a {
 
 /* Sections */
 section {
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
-  margin-top: 1rem;
+  margin-top: 0rem;
   background-color: var(--secondary-color);
-  border-radius: 8px;
+  border-radius: 0;
 }
 
 section h2 {
@@ -147,6 +147,193 @@ section h2 {
 .gallery img {
   width: 250px;
   border-radius: 16px;
+}
+
+/*Hero2 Section */
+.hero2 {
+  position: relative;
+  text-align: center;
+  padding: 0;
+  margin: 0px;
+}
+
+.hero2 h1 {
+  font-family: 'Shadows Into Light Two', cursive;
+  font-size: 3rem; 
+  font-weight: bold; 
+  text-transform: uppercase; 
+  letter-spacing: 1px; 
+  color:#ff9800;
+  padding: 40px;
+}
+
+.hero2-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero2-text {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #e1d1b8;
+  font-size: 24px;
+  margin-top: 10%
+}
+
+.cta1-button {
+  display: inline-block;
+  background-color: #ff9800;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  box-shadow: 3px 3px 6px rgba(255, 255, 255, 0.782); /* Adds a nice shadow */
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.cta1-button:hover {
+  background-color: #c4a77d;
+  transform: scale(1.05);
+}
+
+.hero2-images {
+  position: absolute;
+  bottom: 1%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10rem;
+}
+
+.hero2-images figure {
+  text-align: center;
+}
+
+.hero2-images img {
+  width: 300px;
+  height: 300px;
+  border-radius: 15px;
+  border: 5px solid rgb(248, 245, 245);
+  box-shadow: 5px 5px 6px black; /* Add shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth effect */
+}
+
+.hero2-images figcaption {
+  margin-top: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* Newsletter */
+.newsletter {
+  padding: 20px;
+  background-color: #e0f2f1;
+  text-align: center;
+  margin: 0px;
+}
+
+.newsletter form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.newsletter input {
+  padding: 16px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.newsletter button {
+  background-color: #00796b;
+  color: white;
+  border: none;
+  padding: 16px 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-weight: bold;
+  box-shadow: 3px 3px 6px rgba(53, 184, 114, 0.782); /* Adds a nice shadow */
+}
+
+.newsletter button:hover {
+  background-color: green;
+  transform: scale(1.05);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.call-to-action {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* Image takes 2 parts, text takes 1 */
+  align-items: center;
+  background-color: #d6bea6; /* Beige background */
+  padding: 4rem 2rem;
+  gap: 0rem;
+}
+
+.cta-image img {
+  width: 80%;
+  height: 20%;
+  border-radius: 10px; /* Optional: Soft edges */
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+.cta-content {
+  flex: 1;
+  background-color: #5a6d50; /* Green background */
+  top: 50%;
+  left: 50%;
+  color: white;
+  padding: 3rem;
+  border-radius: 8px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Shadow effect */
+  text-align: center;
+  margin-left: -70%;
+  margin-right: 30%;
+}
+
+.cta-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.cta-content p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #e3c6a0; /* Soft beige */
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  box-shadow: 3px 3px 6px rgba(255, 255, 255, 0.782);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+  background-color: #c4a77d;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .call-to-action {
+      grid-template-columns: 1fr; /* Stack image and text on mobile */
+      text-align: center;
+  }
 }
 
 /* Contact Information */
@@ -252,6 +439,7 @@ footer .social-links {
 }
 
 footer .social-links img {
-  height: 30px;
+  height: 50px;
+  width: 50px;
   margin: 0;
 }
