@@ -558,8 +558,8 @@ margin-right: 0;
 
 .trip img {
   max-width: 500px;  /* Adjust as needed */
-  width: 100%;
-  height: auto; /* Adjust as needed */
+  width: 450px;
+  height: 250px;
   border-radius: 8px;
   margin: 10px;
 }
