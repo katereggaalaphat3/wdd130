@@ -38,6 +38,34 @@ header {
   color: white;
 }
 
+@media (max-width: 768px) {
+  header {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  nav ul {
+      flex-direction: column;
+  }
+
+  .hero3-text {
+      width: 90%;
+  }
+
+  .trips {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .trip {
+      max-width: 100%;
+  }
+
+  .trips-table {
+      font-size: 14px;
+  }
+}
+
 header .logo {
   height: 100px;
 }
@@ -60,29 +88,40 @@ header nav a {
 }
 
 /* Hero Section */
-.hero {
+.hero-container {
   position: relative;
   text-align: center;
+  width: 100%;
   background-color: var(--accent1-color);
-  padding: 2rem 0;
+  overflow: hidden; /* Ensures no extra spacing */
+  margin-top: 0;
+  padding: 0px;
+  margin: 0 auto;
 }
 
 .hero-img {
   width: 100%;
   height: auto;
+  position: relative;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  padding: 0;
 }
 
-.hero h1 {
+.hero-container h1 {
   position: absolute;
-  top: 25%;
+  top: 15%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 4rem;
   color: white;
   font-family: 'Oswald', sans-serif;
+  width: 100%;
+  height: auto;
 }
 
-.hero article {
+.hero-container article {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -91,14 +130,34 @@ header nav a {
   padding: 1.5rem;
   border-radius: 25px;
   text-align: left;
-  max-width: 900px;
+  max-width: 90%; /* Adjust to make it more flexible */
+  width: 100%;
+}
+ 
+@media (max-width: 850px ) {
+  .hero-img {
+    height: 68rem;
+  }
+
+  .hero-container h1 {
+    top: 10%;
+  }
+
+  .hero-container {
+  height: 68rem;
+  }  
+
+  .hero-container article {
+    top: 54%;
+  }
 }
 
-.hero .article-img {
+.hero-container .article-img {
   float: right;
   margin-left: 1rem;
-  width: 300px;
-  height: 250px;
+  width: 100%;
+  max-width: 300px; /* Limit the maximum width */
+  height: auto; /* Maintain aspect ratio */
   border-radius: 8px;
 }
 
@@ -120,6 +179,7 @@ section h2 {
 /* History Section */
 .history-content {
   display: flex;
+  flex-wrap: wrap; /* Allow items to wrap */
   align-items: center;
   justify-content: space-around;
   gap: 0.5rem;
@@ -128,14 +188,16 @@ section h2 {
 }
 
 .history-img {
-  width: 300px;
-  Height: 250px;
+  width: 100%;
+  max-width: 300px; /* Limit the maximum width */
+  height: auto; /* Maintain aspect ratio */
   border-radius: 8px;
 }
 
 /* Adventure Section */
 .gallery {
   display: flex;
+  flex-wrap: wrap; /* Allow items to wrap */
   justify-content: center;
   gap: 1rem;
 }
@@ -145,42 +207,77 @@ section h2 {
 }
 
 .gallery img {
-  width: 250px;
+  width: 100%;
+  max-width: 250px; /* Limit the maximum width */
+  height: auto; /* Maintain aspect ratio */
   border-radius: 16px;
 }
 
-/*Hero2 Section */
-.hero2 {
-  position: relative;
-  text-align: center;
-  padding: 0;
-  margin: 0px;
+/* Media Query for Smaller Screens */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2rem; /* Adjust font size for smaller screens */
+  }
+
+  .hero article {
+    width: 90%; /* Adjust width for smaller screens */
+  }
+
+  .history-content {
+    flex-direction: column; /* Stack items vertically */
+  }
 }
 
-.hero2 h1 {
+
+/*Hero2 Section */
+.hero2-container {
+  position: relative;
+  width: 100%;
+  min-height: 60rem; /* Adjust height as needed */
+  overflow: hidden; /* Ensures no extra spacing */
+  margin-top: 0;
+  padding: 0px;
+  margin: 0 auto;
+}
+
+.hero2-container h1 {
   font-family: 'Shadows Into Light Two', cursive;
-  font-size: 3rem; 
+  font-size: clamp(3rem, 1rem + 10vw ,4.5rem);
   font-weight: bold; 
   text-transform: uppercase; 
   letter-spacing: 1px; 
   color:#ff9800;
-  padding: 40px;
+  text-shadow: 
+  1px 1px 1px white;
+} 
+
+@media (max-width: 600px) {
+  .hero2-container h1 {
+    font-size: clamp(2rem, 1rem + 5vw, 4rem);  /* Adjust clamp values for smaller screens */
+  }
 }
 
 .hero2-img {
   width: 100%;
-  height: auto;
-  display: block;
+  height: 60rem;
+  position: relative;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  padding: 0;
 }
 
 .hero2-text {
   position: absolute;
-  top: 0%;
+  top: 60%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  color: #e1d1b8;
-  font-size: 24px;
-  margin-top: 10%
+  transform: translate(-50%, -50%); 
+  color: white; 
+  text-align: center;
+  width: 50%;
+  height: 100%;
+  z-index: 2; 
+  max-width: 80%;
 }
 
 .cta1-button {
@@ -191,7 +288,7 @@ section h2 {
   text-decoration: none;
   border-radius: 10px;
   font-weight: bold;
-  box-shadow: 3px 3px 6px rgba(255, 255, 255, 0.782); /* Adds a nice shadow */
+  box-shadow: 3px 3px 6px rgba(255, 255, 255, 0.782);
   transition: background 0.3s ease, transform 0.2s ease;
 }
 
@@ -226,6 +323,32 @@ section h2 {
   margin-top: 5px;
   font-size: 1rem;
   font-weight: bold;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 1250px) {
+  .hero2-container {
+    background-color: white;
+  }
+
+  .hero2-img {
+    height: 30rem;
+  }
+  .hero2-text {
+    width: 90%;  /* Adjust width for smaller screens */
+    font-size: 1.2rem;  /* Adjust font size */
+    top: 53%;
+  }
+  
+  .hero2-images {
+    gap: 1rem;  /* Reduce gap */
+    flex-wrap: wrap;  /* Enable wrapping */
+    position: relative;
+  }
+  
+  .hero2-images img {
+    width: 300px;  /* limit the maximum width */
+  }
 }
 
 /* Newsletter */
@@ -333,44 +456,63 @@ section h2 {
   .call-to-action {
       grid-template-columns: 1fr; /* Stack image and text on mobile */
       text-align: center;
-  }
+}
+
+.cta-content {
+margin-left: 0%;
+margin-right: 0;
+}
 }
 
 /* Hero3 Section */
-.hero3 {
+.hero3-container {
   position: relative;
-  text-align: center;
-  padding: 0;
-  margin: 0px;
-  margin-bottom: 0;
+  width: 100%;
+  min-height: 20rem; /* Adjust height as needed */
+  overflow: hidden; /* Ensures no extra spacing */
+  margin-top: 0;
+  padding: 20px;
+  margin: 0 auto;
 }
 
-.hero3 h1 {
+@media (max-width: 912px) {
+  .hero3-container {
+    min-height: 50rem;
+  }
+}
+
+.hero3-container h1 {
   font-family: 'Shadows Into Light Two', cursive;
-  font-size: 3rem; 
+  font-size: clamp(0.03rem, 0.01rem + 7vw ,2rem);
   font-weight: bold; 
   text-transform: uppercase; 
   letter-spacing: 1px; 
   color:#ff9800;
-  margin-top: 20%;
   text-shadow: 
   1px 1px 1px white; 
 }
 
 .hero3-img {
   width: 100%;
-  height: auto;
-  display: block;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the entire container */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
 .hero3-text {
   position: absolute;
-  top: 0%;
+  top: 60%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  color:white;
-  font-size: 24px;
-  margin-top: 10%
+  transform: translate(-50%, -50%); /* Centers the text */
+  color: white; 
+  text-align: center;
+  width: 50%;
+  height: 100%;
+  z-index: 2; /* Higher than the image */
+  max-width: 80%;
 }
 
 .cta1-button {
@@ -385,6 +527,7 @@ section h2 {
   transition: background 0.3s ease, transform 0.2s ease;
 }
 
+
 .cta1-button:hover {
   background-color: orange;
   transform: scale(1.05);
@@ -393,6 +536,7 @@ section h2 {
 .trips {
   display: flex;
   flex-direction: column;
+  max-width: 100%;
   gap: 1px;
   margin-top: 0px;
   text-align: left;
@@ -402,16 +546,20 @@ section h2 {
 
 .trip {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;  /* Allow items to wrap */
+  align-items: flex-start;
+  max-width: 100%;
   background-color: #e3f2fd; /* Light blue background */
   padding: 0px;
+  overflow: hidden;
   border-radius: 15px;
   border: 1px solid #ccc;
 }
 
 .trip img {
-  width: 500px;  /* Adjust as needed */
-  height: 250px; /* Adjust as needed */
+  max-width: 500px;  /* Adjust as needed */
+  width: 100%;
+  height: auto; /* Adjust as needed */
   border-radius: 8px;
   margin: 10px;
 }
@@ -419,6 +567,17 @@ section h2 {
 .trip-details {
   flex: 1;
   padding: 10px;
+}
+
+@media (max-width: 600px) {
+  .trip {
+    flex-direction: column;
+  }
+  
+  .trip img {
+    width: 100%;
+    max-width: none;
+  }
 }
 
 .trip-details h2 {
@@ -442,10 +601,13 @@ section h2 {
 .trip-info {
   text-align: center;
   padding: 10px;
+  width: 100%;
+  overflow-x: auto;
 }
 
+
 .trips-table {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   border-collapse: collapse;
   background: white;
@@ -462,6 +624,13 @@ section h2 {
   background: #004466;
   color: white;
   font-size: 1.3rem;
+}
+
+@media (max-width: 486px) {
+  .trips-table th, .trips-table td {
+    padding: 10px;  /* Reduce padding */
+    font-size: 0.8rem;  /* Adjust font size */
+  }
 }
 
 /* Call to Action */
@@ -508,9 +677,10 @@ section h2 {
 /* Employee Profiles */
 .employee-profiles {
   display: flex;
+  flex-wrap: wrap;  /* Allow items to wrap */
   justify-content: center;
   margin-top: 1rem;
-  gap: 1rem;
+  gap: 3rem;
 }
 
 .employee {
@@ -518,13 +688,28 @@ section h2 {
 }
 
 .employee-profiles img {
-  width: 400px;
-  height: 250px
+  width: 100%;  /* Make images responsive */
+  max-width: 500px;  /* Limit the maximum width */
+  height: 250px;  /* Maintain aspect ratio */
 }
+
 .employee p {
   margin-top: 0.5rem;
   font-weight: bold;
 }
+
+/* Media Query for Smaller Screens */
+@media (max-width: 600px) {
+  .employee-profiles img {
+    max-width: 100%;  /* Allow full-width images */
+    width: 100%;
+  }
+
+  .employee {
+    flex: 1 1 100%;  /* Ensure each employee profile takes full width on smaller screens */
+  }
+}
+
 
 /* Contact Form */
 form {
