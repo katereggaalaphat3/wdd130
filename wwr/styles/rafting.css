@@ -1,12 +1,13 @@
 /* Additional styling for the wireframe link */
 .wireframe-link {
-  color: rgb(0, 255, 217)
+  color: white;
+  text-decoration: underline; /* Ensures visibility */
 }
 
 /* Root Variables */
 :root {
-  --primary-color: #2649699d;
-  --secondary-color: #CFCFB4;
+  --primary-color: #264969;
+  --secondary-color: #B0B09A;
   --accent1-color: #B4CDE4;
   --accent2-color: #505033;
   --text-color: #333333;
@@ -36,6 +37,7 @@ header {
   padding: 1rem 2rem;
   background-color: var(--primary-color);
   color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 @media (max-width: 768px) {
@@ -83,8 +85,12 @@ header nav ul {
 
 header nav a {
   text-decoration: none;
-  color: white;
+  color:#F8F8F8;
   font-weight: bold;
+}
+
+header nav a:hover {
+  color: #FFD700; /* Gold for better hover contrast */
 }
 
 /* Hero Section */
@@ -119,6 +125,7 @@ header nav a {
   font-family: 'Oswald', sans-serif;
   width: 100%;
   height: auto;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
 }
 
 .hero-container article {
@@ -168,6 +175,7 @@ section {
   margin-top: 0.2rem;
   background-color: var(--secondary-color);
   border-radius: 0;
+  color: #222; /* Darker text */
 }
 
 section h2 {
@@ -228,7 +236,6 @@ section h2 {
   }
 }
 
-
 /*Hero2 Section */
 .hero2-container {
   position: relative;
@@ -246,9 +253,8 @@ section h2 {
   font-weight: bold; 
   text-transform: uppercase; 
   letter-spacing: 1px; 
-  color:#ff9800;
-  text-shadow: 
-  1px 1px 1px white;
+  color: #b86000; /* Darker orange */
+  text-shadow: 2px 2px white;
 } 
 
 @media (max-width: 600px) {
@@ -280,20 +286,20 @@ section h2 {
   max-width: 80%;
 }
 
-.cta1-button {
+.cta2-button {
   display: inline-block;
-  background-color: #ff9800;
+  background-color: #2D6A27; /* Darker green */
   color: white;
   padding: 10px 20px;
   text-decoration: none;
   border-radius: 10px;
   font-weight: bold;
-  box-shadow: 3px 3px 6px rgba(255, 255, 255, 0.782);
+  box-shadow: 3px 3px 6px rgba(255, 255, 255, 0.782); /* Adds a nice shadow */
   transition: background 0.3s ease, transform 0.2s ease;
 }
 
-.cta1-button:hover {
-  background-color: #c4a77d;
+.cta2-button:hover {
+  background-color: orange;
   transform: scale(1.05);
 }
 
@@ -412,16 +418,17 @@ section h2 {
 
 .cta-content {
   flex: 1;
-  background-color: #5a6d50; /* Green background */
+  background-color: #3b4d30; /* Darker green */
   top: 50%;
   left: 50%;
-  color: white;
+  color: #e0e0e0;
   padding: 3rem;
   border-radius: 8px;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Shadow effect */
   text-align: center;
   margin-left: -70%;
   margin-right: 30%;
+  background-color: #3b4d30; /* Darker green */
 }
 
 .cta-content h2 {
@@ -432,6 +439,7 @@ section h2 {
 .cta-content p {
   font-size: 1.1rem;
   margin-bottom: 1.5rem;
+  color: #f8f8f8;
 }
 
 .cta-button {
@@ -517,8 +525,8 @@ margin-right: 0;
 
 .cta1-button {
   display: inline-block;
-  background-color: rgb(70, 179, 51);
-  color: white;
+  background-color: #004a70; /* Darker blue */
+  color: #ffffff;
   padding: 10px 20px;
   text-decoration: none;
   border-radius: 10px;
@@ -641,7 +649,7 @@ margin-right: 0;
 }
 
 .cta a {
-  background: #ff6600;
+  background: blue;
   color: white;
   padding: 12px 20px;
   text-decoration: none;
